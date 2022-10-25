@@ -7,6 +7,7 @@ btnAddTask.addEventListener("click", () => {
 		const li = createLi(task.value);
 		listTask.appendChild(li);
 		task.value = "";
+		task.focus();
 		return;
 	}
 
@@ -16,7 +17,7 @@ btnAddTask.addEventListener("click", () => {
 const createLi = (value) => {
 	const li = document.createElement("li");
 	const btn = createBtnDel();
-	li.setAttribute("class", "li-task")
+	li.setAttribute("class", "li-task");
 	li.innerHTML = value;
 	li.appendChild(btn);
 	return li;
